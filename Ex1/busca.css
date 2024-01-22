@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.container{
+    font-family: "Poppins";
+}
+
+.search-form{
+    text-align: center;
+    margin-top: 200px;
+}
+
+.input-box .search-field{
+    width: 50%;
+    height: 50px;
+    padding: 5px 0;
+    font-size: 20px;
+    margin: 10px 0;
+    border: 2px solid;
+    outline: none;
+    resize: none;
+    border-radius: 50px;
+    text-indent: 10px;
+}
+
+.input-box input[type="submit"]{
+    width: 150px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    background-color: crimson;
+    border-radius: 50px;
+    margin-top: 100px;
+    color: white;
+}
+
+.search h2{
+    color: crimson;
+    font-size: 80px;
+}
+
+.nav-list{
+    display: flex;
+    list-style-type: none;
+    justify-content: right;
+}
+
+.nav-list li{
+    padding: 10px;
+}
+
+.user-img{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 50px;
+}
