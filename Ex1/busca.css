@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-.container{
+*{
     font-family: "Poppins";
+    color: black;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
 }
 
 .search-form{
     text-align: center;
-    margin-top: 200px;
+    /* margin-top: 150px; */
+}
+
+.input-box{
+    padding: 16px;
 }
 
 .input-box .search-field{
@@ -15,11 +25,17 @@
     padding: 5px 0;
     font-size: 20px;
     margin: 10px 0;
-    border: 2px solid;
+    border: 2px solid lightgray;
     outline: none;
     resize: none;
     border-radius: 50px;
     text-indent: 10px;
+    margin: 0;
+}
+
+.input-box .search-field:hover{
+    background-color: lightgray;
+    box-shadow: 0 0 5px gray;
 }
 
 .input-box input[type="submit"]{
@@ -30,19 +46,25 @@
     font-size: 18px;
     background-color: crimson;
     border-radius: 50px;
-    margin-top: 100px;
     color: white;
+}
+
+.input-box input[type="submit"]:hover{
+    box-shadow: 0 0 5px crimson;        
 }
 
 .search h2{
     color: crimson;
     font-size: 80px;
+    margin: 0
 }
 
 .nav-list{
     display: flex;
     list-style-type: none;
     justify-content: right;
+    margin: 0;
+    padding: 10px;
 }
 
 .nav-list li{
@@ -55,4 +77,48 @@
     margin-left: 10px;
     border-radius: 50px;
     border: 2px solid crimson;
+}
+
+.user-img:hover{
+    box-shadow: 0 0 5px crimson;
+}
+
+.footer{
+    position: absolute;
+    background-color: crimson;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer .footer-list{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+
+.footer .footer-list li{
+    padding: 16px;
+}
+
+.footer .lang-div{
+    text-align: right;
+}
+
+.footer .lang-div p{
+    margin-right: 16px;
+}
+
+hr{
+    border: 1px solid black;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: underline;
 }
