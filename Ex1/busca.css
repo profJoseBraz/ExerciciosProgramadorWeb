@@ -38,6 +38,11 @@ body{
     box-shadow: 0 0 5px gray;
 }
 
+.input-box .search-field:focus{
+    background-color: lightgray;
+    box-shadow: 0 0 5px gray;
+}
+
 .input-box input[type="submit"]{
     width: 150px;
     border: none;
