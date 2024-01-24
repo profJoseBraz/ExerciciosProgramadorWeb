@@ -1,7 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
-    font-family: "Merriweather";
+    font-family: "Poppins";
+    color: #D5D5D5;
+}
+
+body{
+    /* background-color: #1f2433;
+    background-image: url(forest.jpg);
+    background-size: cover; 
+    background-position: center;
+    height: 100vh; */
+    position: relative;
+    background: linear-gradient(to right, #1f2433 50vw, transparent),linear-gradient(to top, #1f2433 5vw, transparent), linear-gradient(to bottom, #1f2433 1vw, transparent), url(forest.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .nav-bar{
@@ -11,6 +25,10 @@
 
 .nav-bar .nav-bar-img{
     display: flex;
+}
+
+.nav-bar .nav-bar-img img{
+    margin-top: 10px;
 }
 
 .nav-bar .nav-bar-img .logo{
@@ -34,10 +52,110 @@
 }
 
 .infos{
-    margin-top: 15vh;
+    margin-top: 10vh;
     padding: 10px;
 }
 
 .infos .already-a-member{
     display: flex;
+}
+
+.user-name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-text{
+    /* padding-left: 10px; */
+    padding-top: 10px;
+}
+
+.input-text input{
+    border-radius: 15px;
+    height: 35px;
+    border: none;
+    background-color: #394464;
+    outline: none;
+    text-indent: 10px;
+}
+
+.input-text input:focus{
+    box-shadow: 0px 0px 5px #3c5db0;
+    /* border: 2px solid #3c5db0; */    
+}
+
+a{
+    text-decoration: none;
+    color: #3c5db0;
+    text-shadow: 0px 0px 2px #3c5db0;
+}
+
+.login-form{
+    width: 370px;
+    border-radius: 10px;    
+}
+
+.login-form .user-email{
+    width: 100%;
+}
+
+.login-form .user-email input{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-form .user-password input{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.text-fields{
+    padding: 10px;
+}
+
+.buttons{
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons .button input{
+    width: 170px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons .button input[name="change-method"]{
+    background-color: #525252;
+}
+
+.buttons .button input[name="change-method"]:hover{
+    box-shadow: 0px 0px 5px #525252;
+}
+
+.buttons .button input[name="create-account"]{
+    background-color: #3c5db0;
+}
+
+.buttons .button input[name="create-account"]:hover{
+    box-shadow: 0px 0px 5px #3c5db0;
+}
+
+.create-account-text{
+    display: flex;
+}
+
+.dot{
+    color: #3c5db0;
+    text-shadow: 0px 0px 2px #3c5db0;
+}
+
+@media (max-width: 500px) {
+    body{
+        background: none;
+        background-color: #1f2433;
+    }
 }

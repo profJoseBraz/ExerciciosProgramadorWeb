@@ -18,18 +18,58 @@
         </div>
         <nav>
             <ul>
-                <li><h3>Home<h3></li>
-                <li><h3>Join<h3></li>
+                <li>
+                    <a href="#Home"><h3>Home</h3></a>
+                </li>
+                <li>
+                    <a href="#Join"><h3>Join</h3></a>
+                </li>
             </ul>
         </nav>
     </div>
 
     <div class="infos">
-        <h4>START FOR FREE</h4> 
-        <h1>Create new account</h1>
+        <h4>START FOR FREE</h4>
+        <div class="create-account-text"> 
+            <h1>Create new account</h1>
+            <h1 class="dot">.</h1>
+        </div>
         <div class="already-a-member">
             <h5>Already a member? <a href="#Login page">Log In</a><h5>
         </div>   
+    </div>
+
+    <div class="login-form">
+        <form>
+            <div class="text-fields">
+                <div class="user-name">
+                    <div class="input-text">
+                        <input type="text" name="first-name" required="required" placeholder="First name">
+                    </div>
+                    <div class="input-text">
+                        <input type="text" name="last-name" required="required" placeholder="Last name">
+                    </div>
+                </div>
+                <div class="user-email">
+                    <div class="input-text">
+                        <input type="text" name="email" required="required" placeholder="Email">
+                    </div>
+                </div>
+                <div class="user-password">
+                    <div class="input-text">
+                        <input type="password" name="password" required="required" placeholder="Password">
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="button">
+                    <input type="submit" name="change-method" value="Change method">
+                </div>
+                <div class="button">
+                    <input type="submit" name="create-account" value="Create account">
+                </div>
+            </div>
+        </form>
     </div>
 </body>
 </html>
