@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    color: rgb(62, 62, 62);
+}
+
+body{
+    background-color: rgb(227, 220, 220);
+}
+
+header .grid-item img{
+    width: 200px;
+    height: 80px;
+    border-radius: 10px;  
+}
+
+header .header-grid{
+    display: grid;
+    grid-template-columns: 15% 60% 25%;
+    padding: 10px;
+}
+
+header .header-grid .grid-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .header-grid .grid-item .postal-info{
+    display: flex;
+}
+
+header .header-grid .grid-item .postal-info .icon{
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+header .header-grid .grid-item .menu-links{
+    width: 100%;
+}
+
+header .header-grid .grid-item .menu-links ul{
+    display: flex;
+    list-style: none;
+}
+
+header .header-grid .grid-item .menu-links ul li{
+    margin-right: 20px;
+}
+
+#gi3{
+    justify-content: right;
+}
+
+header .header-grid .grid-item form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header .header-grid .grid-item form input[type="text"]{
+    width: 100%;
+    height: 60px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+}
+
+header .header-grid .grid-item form button{
+    width: 10%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    border-left: 1px solid rgb(187, 187, 187);
+    cursor: pointer;
+    background-color: white;
+}
