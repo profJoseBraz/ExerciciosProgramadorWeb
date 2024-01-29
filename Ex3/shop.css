@@ -5,10 +5,18 @@
     margin: 0;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     color: rgb(62, 62, 62);
+    font-size: 18px;
 }
 
 body{
-    background-color: rgb(227, 220, 220);
+    background-color: #ebebeb;
+    height: 100vh;
+}
+
+/* Estilização do header */
+
+.header-container{
+    min-width: 1000px;
 }
 
 header .grid-item img{
@@ -21,6 +29,8 @@ header .header-grid{
     display: grid;
     grid-template-columns: 15% 60% 25%;
     padding: 10px;
+    background-color: #ffe600;
+    overflow: hidden;
 }
 
 header .header-grid .grid-item{
@@ -47,12 +57,30 @@ header .header-grid .grid-item .menu-links ul{
     list-style: none;
 }
 
-header .header-grid .grid-item .menu-links ul li{
+header .header-grid .grid-item .menu-links-personal ul{
+    display: flex;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+}
+
+header .header-grid .grid-item .menu-links-personal{
+    display: flex;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+}
+
+header .header-grid .grid-item .menu-links-personal ul li i{
+    font-size: 25px;
+}
+
+header .header-grid .grid-item .menu-links-personal ul li{
     margin-right: 20px;
 }
 
-#gi3{
-    justify-content: right;
+header .header-grid .grid-item .menu-links ul li{
+    margin-right: 20px;
 }
 
 header .header-grid .grid-item form{
@@ -67,6 +95,13 @@ header .header-grid .grid-item form input[type="text"]{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border: none;
+    text-indent: 20px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+header .header-grid .grid-item form input[type="text"]:focus{
+    background-color: #ebebeb;
 }
 
 header .header-grid .grid-item form button{
@@ -77,4 +112,99 @@ header .header-grid .grid-item form button{
     border-left: 1px solid rgb(187, 187, 187);
     cursor: pointer;
     background-color: white;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+header .header-grid .grid-item form button:hover{
+    background-color: #ebebeb;
+}
+
+/* Estilização da main */
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+main .offers-img{
+   width: 100%;
+   height: 80%;
+   min-width: 1000px;
+   min-height: 500px;
+}
+
+main .offers-img img{
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main .fast-options{
+    display: flex;
+}
+
+main .card-container{
+    padding: 10px;
+    overflow-x: auto;
+    min-width: 200px;
+}
+
+main .card-container .card:hover,
+main .card-container .card button:hover{
+    cursor: pointer;
+}
+
+main .fast-options .card{
+    width: 200px;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    background-color: white;
+    height: 250px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+main .fast-options .card .card-title{
+    padding: 10px;
+    text-align: center;
+}
+
+main .fast-options .card .card-title h2{
+    color: rgb(0, 174, 255);
+}
+
+main .fast-options .card .card-icon{
+    padding: 10px;
+    text-align: center;
+    height: 50px;
+}
+
+main .fast-options .card .card-icon i{
+    font-size: 50px;
+}
+
+main .fast-options .card .card-msg{
+    padding: 10px;
+    text-align: center;
+    height: 50px;
+}
+
+main .fast-options .card .card-msg p{
+    font-size: 15px;
+}
+
+main .fast-options .card .card-button{
+    padding: 10px;
+    text-align: center;
+}
+
+main .fast-options .card .card-button button{
+    border-radius: 5px;
+    background-color: rgb(0, 174, 255);
+    border: none;
+    color: rgb(0, 102, 255);
+    font-size: 12px;
+    padding: 10px 20px;
+    font-weight: bold;
+    width: 150px;
 }
