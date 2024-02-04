@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+header .container{
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+footer .container{
+    width: 100%;
+}
+
+header .container .nav{
+    display: flex;
+    width: 100%;
+    background-color: #151d27;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .container .logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+header .container .logo{
+    padding: 20px;
+}
+
+header .container .brand-name{
+    color: #fefefe;
+    padding: 10px;
+}
+
+header .container .more{
+    padding: 10px;
+}
+
+header .container .more i{
+    font-size: 24px;
+    color: #fefefe;
+}
+
+header .container .search-form{
+    padding: 10px;
+}
+
+header .container .search-form form{
+    background-color: #263241;
+    border-radius: 5px;
+}
+
+header .container .search-form form input{
+    border: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    font-style: italic;
+    background-color: #263241;
+    outline: none;
+}
+
+header .container .search-form form input::placeholder{
+    color: #94a3b4;
+}
+
+header .container .search-form form button{
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    font-style: italic;
+    background-color: #263241;
+    color: #94a3b4;
+}
+
+header .container .chart{
+    padding: 10px;
+}
+
+header .container .chart form{
+    background-color: #263241;
+    border-radius: 5px;
+}
+
+header .container .chart form input{
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    font-style: italic;
+    background-color: #263241;
+}
+
+header .container .chart form button{
+    border: none;
+    border-radius: 5px;
+    width: 20px;
+    height: 40px;
+    background-color: #263241;
+    color: #94a3b4;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container .user{
+    color: #f9f9f9;
+    padding: 10px;
+    display: flex;
+}
+
+header .container .user .icon{
+    margin-right: 10px;
+}
+
+header .container .nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+}
+
+header .container .nav .left,
+header .container .nav .mid,
+header .container .nav .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    display: flex;
+}
+
+footer .container{
+    width: 100%;
+    padding: 20px 100px;
+    background-color: #151d27;
+}
+
+footer .container .parts{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+footer .container .parts hr{
+    width: 96%;
+    margin: 10px 0px;
+    border-color: #828e88;
+}
+
+footer .container .parts .part-1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #828e88;
+}
+
+footer .container .parts .part-1 .links{
+    display: flex;
+}
+
+footer .container .parts .part-1 .links p{
+    margin: 0px 20px;
+}
+
+footer .container .parts .part-1 .lang{
+    margin-right: 20px;
+}
+
+footer .container .parts .part-2{
+    width: 100%;
+}
+
+footer .container .parts .part-2 h4{
+    margin: 0px 20px;
+    color: #f9f9f9
+}
+
+footer .container .parts .part-2 .medias{
+    display: flex;
+}
+
+footer .container .parts .part-2 .medias ul li{
+    list-style: none;
+    margin: 20px 20px;
+}
+
+footer .container .parts .part-2 .medias ul li a{
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 5PX;
+    padding: 10px;
+    background-color: #263241;
+}
+
+/* Estilização dos botões dropdown */
+
+.dropdown{
+    padding: 0px 15px;
+}
+
+.dropdown-btn {
+    display: flex;
+    /* padding: 10px; */
+    font-size: 16px;
+    border: none;
+    border-bottom: solid #f9f9f9;
+    cursor: pointer;
+    background-color: transparent;
+    color: #f9f9f9;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+  /* Mostrar o dropdown quando o botão é hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-btn .icon{
+    margin-left: 10px;
+}
+
+/* **** */

@@ -11,6 +11,7 @@
 body{
     background-color: #ebebeb;
     height: 100vh;
+    min-width: 1000px;
 }
 
 /* Estilização do header */
@@ -140,14 +141,67 @@ main .offers-img img{
     border-bottom-right-radius: 10px;
 }
 
+main .container{
+    position: relative;
+    overflow: hidden;
+}
+
 main .fast-options{
     display: flex;
+    align-items: center;
+    transform: translateY(-100px);
+    z-index: 1;
+    padding: 50px;
+    /* overflow: hidden; */
+}
+
+main .fast-options .caroussel{
+    display: flex;
+}
+
+main .prev-button button{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    left: 0;
+    /* transform: translateY(-30px); */
+    position: absolute;
+    z-index: 2;
+    margin-top: 30px;
+    background-color: #ffffff;
+    color: #458dfa;
+    border: 1px solid;
+}
+
+main .prev-button button:hover{
+    cursor: pointer;
+}
+
+main .next-button button{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    right: 0;
+    /* transform: translateY(-30px); */
+    position: absolute;
+    z-index: 2;
+    margin-top: 30px;
+    background-color: #ffffff;
+    color: #458dfa;
+    border: 1px solid;
+}
+
+main .next-button button:hover{
+    cursor: pointer;
 }
 
 main .card-container{
     padding: 10px;
-    overflow-x: auto;
     min-width: 200px;
+    /* transform: translateY(-100px); */
+    z-index: 1;
 }
 
 main .card-container .card:hover,
@@ -200,9 +254,9 @@ main .fast-options .card .card-button{
 
 main .fast-options .card .card-button button{
     border-radius: 5px;
-    background-color: rgb(0, 174, 255);
+    background-color: #e2ecfa;
     border: none;
-    color: rgb(0, 102, 255);
+    color: #3e89fa;
     font-size: 12px;
     padding: 10px 20px;
     font-weight: bold;

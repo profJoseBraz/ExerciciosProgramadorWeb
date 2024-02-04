@@ -6,6 +6,7 @@
     <title>Shop Brasil</title>
     <link rel="stylesheet" href="shop.css">
     <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="shop.js"></script>
 </head>
 <body>
     <header>
@@ -62,96 +63,174 @@
         </div>
     </header>
     <main>
-        <div class="offers-img">
-            <img src="ofertas.webp">
-        </div>
-        <div class="fast-options">
-            
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-title">
-                        <h2>Entre na sua conta</h2>
-                    </div>
-                    <div class="card-icon">
-                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-                    </div>
-                    <div class="card-msg">
-                        <p>Aproveite as melhores ofertas e compra tudo o que quiser!</p>
-                    </div>
-                    <div class="card-button">
-                        <button>Entrar na sua conta</button>
-                    </div>
-                </div>
+        <div class="container">
+            <div class="offers-img">
+                <img src="ofertas.webp">
             </div>
 
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-title">
-                        <h2>Insira sua localização</h2>
-                    </div>
-                    <div class="card-icon">
-                        <i class="fa fa-globe" aria-hidden="true"></i>
-                    </div>
-                    <div class="card-msg">
-                        <p>Confira os custos e prazos de dentrega</p>
-                    </div>
-                    <div class="card-button">
-                        <button>Inserir localização</button>
-                    </div>
-                </div>
+            <div class="prev-button" onclick="prevButtonClick()">
+                <button>-</button>
             </div>
 
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-title">
-                        <h2>Meio de pagamento</h2>
-                    </div>
-                    <div class="card-icon">
-                        <i class="fa fa-credit-card" aria-hidden="true"></i>
-                    </div>
-                    <div class="card-msg">
-                        <p>Pague suas compras com rapidez e segurança</p>
-                    </div>
-                    <div class="card-button">
-                        <button>Mostrar meios</button>
-                    </div>
-                </div>
+            <div class="next-button" onclick="nextButtonClick()">
+                <button>+</button>
             </div>
 
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-title">
-                        <h2>Menos de R$100</h2>
+            <div class="fast-options">
+                <div class="caroussel">
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-title">
+                                <h2>Entre na sua conta</h2>
+                            </div>
+                            <div class="card-icon">
+                                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="card-msg">
+                                <p>Aproveite as melhores ofertas e compra tudo o que quiser!</p>
+                            </div>
+                            <div class="card-button">
+                                <button>Entrar na sua conta</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-icon">
-                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="card-msg">
-                        <p>Confira produtos com preços baixos</p>
-                    </div>
-                    <div class="card-button">
-                        <button>Mostrar produtos</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-title">
-                        <h2>Mais vendidos</h2>
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-title">
+                                <h2>Insira sua localização</h2>
+                            </div>
+                            <div class="card-icon">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                            </div>
+                            <div class="card-msg">
+                                <p>Confira os custos e prazos de dentrega</p>
+                            </div>
+                            <div class="card-button">
+                                <button>Inserir localização</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-icon">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
+
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-title">
+                                <h2>Meio de pagamento</h2>
+                            </div>
+                            <div class="card-icon">
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            </div>
+                            <div class="card-msg">
+                                <p>Pague suas compras com rapidez e segurança</p>
+                            </div>
+                            <div class="card-button">
+                                <button>Mostrar meios</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-msg">
-                        <p>Explore os produtos que são tendência</p>
+
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-title">
+                                <h2>Menos de R$100</h2>
+                            </div>
+                            <div class="card-icon">
+                                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                            </div>
+                            <div class="card-msg">
+                                <p>Confira produtos com preços baixos</p>
+                            </div>
+                            <div class="card-button">
+                                <button>Mostrar produtos</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-button">
-                        <button>Mais vendidos</button>
+
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-title">
+                                <h2>Mais vendidos</h2>
+                            </div>
+                            <div class="card-icon">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </div>
+                            <div class="card-msg">
+                                <p>Explore os produtos que são tendência</p>
+                            </div>
+                            <div class="card-button">
+                                <button>Mais vendidos</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-title">
+                                <h2>Mais vendidos</h2>
+                            </div>
+                            <div class="card-icon">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </div>
+                            <div class="card-msg">
+                                <p>Explore os produtos que são tendência</p>
+                            </div>
+                            <div class="card-button">
+                                <button>Mais vendidos</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-title">
+                                <h2>Mais vendidos</h2>
+                            </div>
+                            <div class="card-icon">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </div>
+                            <div class="card-msg">
+                                <p>Explore os produtos que são tendência</p>
+                            </div>
+                            <div class="card-button">
+                                <button>Mais vendidos</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-title">
+                                <h2>Mais vendidos</h2>
+                            </div>
+                            <div class="card-icon">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </div>
+                            <div class="card-msg">
+                                <p>Explore os produtos que são tendência</p>
+                            </div>
+                            <div class="card-button">
+                                <button>Mais vendidos</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <!-- <script>
+        function nextButtonClick(){
+            var fastOptionsContainer = document.querySelector(".caroussel");
+
+            fastOptionsContainer.style.transition = "transform 0.5s ease";
+            fastOptionsContainer.style.transform = "translateX(-20%)"; 
+        }
+
+        function prevButtonClick(){
+            var fastOptionsContainer = document.querySelector(".caroussel");
+
+            fastOptionsContainer.style.transition = "transform 0.5s ease";
+            fastOptionsContainer.style.transform = "translateX(0px)";
+        }
+    </script> -->
 </body>
 </html>
