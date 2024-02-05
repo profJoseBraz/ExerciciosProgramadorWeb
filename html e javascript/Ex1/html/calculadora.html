@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/calculadora.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="calculator">
+                <input id="result-area" type="text">
+                <div class="buttons">
+                    <div id="ac" class="button-simbol" onclick="acClick()">
+                        <button>AC</button>
+                    </div>
+                    <div id="delete" class="button-simbol" onclick="deleteClick()">
+                        <button>del</button>
+                    </div>
+                    <div id="percent" class="button-simbol" onclick="percentClick()">
+                        <button>%</button>
+                    </div>
+                    <div id="division" class="button-simbol" onclick="divisionClick()">
+                        <button>/</button>
+                    </div>
+                    <div id="one" class="button" onclick="numberOneClick()">
+                        <button>7</button>
+                    </div>
+                    <div id="two" class="button" onclick="numberTwoClick()">
+                        <button>8</button>
+                    </div>
+                    <div id="three" class="button" onclick="numberThreeClick()">
+                        <button>9</button>
+                    </div>
+                    <div id="mult" class="button-simbol" onclick="multClick()">
+                        <button>x</button>
+                    </div>
+                    <div id="four" class="button" onclick="numberFourClick()">
+                        <button>4</button>
+                    </div>
+                    <div id="five" class="button" onclick="numberFiveClick()">
+                        <button>5</button>
+                    </div>
+                    <div id="six" class="button" onclick="numberSixClick()">
+                        <button>6</button>
+                    </div>
+                    <div id="minus" class="button-simbol" onclick="minusClick()">
+                        <button>-</button>
+                    </div>
+                    <div id="seven" class="button" onclick="numberSevenClick()">
+                        <button>1</button>
+                    </div>
+                    <div id="eight" class="button" onclick="numberEightClick()">
+                        <button>2</button>
+                    </div>
+                    <div id="nine" class="button" onclick="numberNineClick()">
+                        <button>3</button>
+                    </div>
+                    <div id="sum" class="button-simbol" onclick="sumClick()">
+                        <button>+</button>
+                    </div>
+                    <div>
+           
+                    </div>
+                    <div id="zero" class="button" onclick="numberZeroClick()">
+                        <button>0</button>
+                    </div>
+                    <div id="comma" class="button" onclick="commaClick()">
+                        <button>,</button>
+                    </div>
+                    <div id="result" class="button-simbol" onclick="resultClick()">
+                        <button>=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const resultArea = document.getElementById("result-area");
+
+        function numberOneClick(){
+            const button = document.getElementById("one");
+            resultArea.value += button.textContent.trim();
+        }
+
+        function numberTwoClick(){
+            const button = document.getElementById("two");
+            resultArea.value += button.textContent.trim();
+        }
+
+        function numberThreeClick(){
+            const button = document.getElementById("three");
+            resultArea.value += button.textContent.trim();
+        }
+
+        function numberFourClick(){
+            const button = document.getElementById("four");
+            resultArea.value += button.textContent.trim();
+        }
+
+        function numberFiveClick(){
+            const button = document.getElementById("five");
+            resultArea.value += button.textContent.trim();
+        }
+
+        function numberSixClick(){
+            const button = document.getElementById("six");
+            resultArea.value += button.textContent.trim();
+        }
+
+        function numberSevenClick(){
+            const button = document.getElementById("seven");
+            resultArea.value += button.textContent.trim();
+        }
+
+        function numberEightClick(){
+            const button = document.getElementById("eight");
+            resultArea.value += button.textContent.trim();
+        }
+
+        function numberNineClick(){
+            const button = document.getElementById("nine");
+            resultArea.value += button.textContent.trim();
+        }
+
+        function numberZeroClick(){
+            const button = document.getElementById("zero");
+            resultArea.value += button.textContent.trim();
+        }
+
+        function sumClick(){
+            const button = document.getElementById("sum");
+            resultArea.value += button.textContent.trim();
+        }
+
+        function minusClick(){
+            const button = document.getElementById("minus");
+            resultArea.value += button.textContent.trim();
+        }
+
+        function multClick(){
+            const button = document.getElementById("mult");
+            resultArea.value += "*";
+        }
+
+        function divisionClick(){
+            const button = document.getElementById("division");
+            resultArea.value += button.textContent.trim();
+        }
+
+        function commaClick(){
+            const button = document.getElementById("comma");
+            resultArea.value += ".";
+        }
+
+        function percentClick(){
+            const resultAreaValue = parseFloat(resultArea.textContent);
+            const result = resultAreaValue / 100;
+            resultArea.value = result;
+        }
+
+        function resultClick(){
+            const result = eval(resultArea.value);
+            resultArea.value = result;
+        }
+
+        function acClick(){
+            resultArea.value = "";
+        }
+
+        function deleteClick(){
+            
+        }
+    </script>
+</body>
+</html>

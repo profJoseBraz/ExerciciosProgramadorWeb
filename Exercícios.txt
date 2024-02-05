@@ -1,6 +1,8 @@
 1 - Criar uma página de busca, semelhante a do Google.
 
-2 - Crie uma página de venda de um produto. Deve ter todas as descrições pertinentes à venda como: preço, descrição do produto, marca e outras informações que julgar importantes.
+2 - Criar uma página de login
+
+3 - Crie uma página de venda de um produto. Deve ter todas as descrições pertinentes à venda como: preço, descrição do produto, marca e outras informações que julgar importantes.
     - Adicione campos para que o usuário posso informar o endereço para a entrega dos produtos.
 
-3 - Crie uma página de pedidos de um restaurante, que contenha imagens de comidas, suas descrições e seus respectivos preços.
+4 - Crie uma página de pedidos de um restaurante, que contenha imagens de comidas, suas descrições e seus respectivos preços.

@@ -15,7 +15,7 @@ body{
     background: linear-gradient(to right, #1f2433 50vw, transparent),linear-gradient(to top, #1f2433 5vw, transparent), linear-gradient(to bottom, #1f2433 1vw, transparent), url(forest.jpg) no-repeat;
     background-size: cover;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .nav-bar{
