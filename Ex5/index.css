@@ -6,9 +6,12 @@
     font-family: "Poppins";
 }
 
+body{
+    min-width: 587px;
+}
+
 header .container{
     width: 100%;
-    position: fixed;
     top: 0;
 }
 
@@ -138,6 +141,79 @@ header .container .nav .right{
     align-items: center;
 }
 
+main .container{
+    width: 100%;
+    height: 100%;
+    background-color: #151d27a8;
+    color: #f9f9f9;
+    justify-content: center;
+}
+
+main .container .product-show{
+    background-color: #151d2783;
+    padding: 50px 200px;
+}
+
+main .container .product-show .brand{
+    display: flex;
+    justify-content: space-between;
+}
+
+main .container .product-show .brand button{
+    margin-left: 20px;
+    width: 100px;
+    border: 1px solid #0094c5;
+    border-radius: 5px;
+    background-color: #06749b;
+    color: #f9f9f9;
+    font-weight: bold;
+}
+
+main .container .product-show .cards .card{
+    width: 220px;
+    height: 190px;
+    border-radius: 10px;
+    margin-top: 20px;
+    /* border: 1px solid; */
+    border: none;
+    background-color: #263241;
+    min-width: 200px;
+}
+
+main .container .product-show .cards .card img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+main .container .product-show .cards{
+    display: flex;
+}
+
+main .container .product-show .cards .card{
+    margin: 15px 10px;
+}
+
+main .container .product-show .cards .card .text{
+    margin: 0px 10px;
+}
+
+main .container .product-show .cards .card .price-cart{
+    margin: 0px 10px;
+    text-align: right;
+}
+
+main .container .product-show .cards .card .price-cart button{
+    border-radius: 3px;
+    border: none;
+    padding: 3px 10px;
+    background-color: #384657;
+    color: #f9f9f9;
+    font-weight: bold;
+}
+
 footer{
     /* position: fixed; */
     bottom: 0;
@@ -148,7 +224,7 @@ footer{
 footer .container{
     width: 100%;
     padding: 20px 100px;
-    background-color: #151d27;
+    background-color: #010611;
 }
 
 footer .container .parts{
@@ -160,9 +236,9 @@ footer .container .parts{
 }
 
 footer .container .parts hr{
-    width: 96%;
+    width: 100%;
     margin: 10px 0px;
-    border-color: #828e88;
+    border-color: #1e2937;
 }
 
 footer .container .parts .part-1{
@@ -190,7 +266,7 @@ footer .container .parts .part-2{
 
 footer .container .parts .part-2 h4{
     margin: 0px 20px;
-    color: #f9f9f9
+    color: #f9f9f9;
 }
 
 footer .container .parts .part-2 .medias{
@@ -199,7 +275,7 @@ footer .container .parts .part-2 .medias{
 
 footer .container .parts .part-2 .medias ul li{
     list-style: none;
-    margin: 20px 20px;
+    margin: 20px 20px
 }
 
 footer .container .parts .part-2 .medias ul li a{
@@ -209,6 +285,60 @@ footer .container .parts .part-2 .medias ul li a{
     border-radius: 5PX;
     padding: 10px;
     background-color: #263241;
+}
+
+footer .container .part-2 .medias ul{
+    display: flex;
+}
+
+footer .container .parts .part-2 .medias ul li a#facebook i{
+    color: #5b79a8;
+}
+
+footer .container .parts .part-2 .medias ul li a#twitter i{
+    color: #63b3ff;
+}
+
+footer .container .parts .part-2 .medias ul li a#youtube i{
+    color: #ee2b3b;
+}
+
+footer .container .parts .part-2 .medias ul li a#instagram i{
+    color: #f30157;
+}
+
+footer .container .parts .part-2 .medias ul li a#twitch i{
+    color: #6c8ada;
+}
+
+footer .container .parts .part-2 .medias ul li a#facebook:hover{
+    color: #5b79a8;
+    background-color: white;
+    transition: 0.5s;
+}
+
+footer .container .parts .part-2 .medias ul li a#twitter:hover{
+    color: #63b3ff;
+    background-color: white;
+    transition: 0.5s;
+}
+
+footer .container .parts .part-2 .medias ul li a#youtube:hover{
+    color: #ee2b3b;
+    background-color: white;
+    transition: 0.5s;
+}
+
+footer .container .parts .part-2 .medias ul li a#instagram:hover{
+    color: #f30157;
+    background-color: white;
+    transition: 0.5s;
+}
+
+footer .container .parts .part-2 .medias ul li a#twitch:hover{
+    color: #6c8ada;
+    background-color: white;
+    transition: 0.5s;
 }
 
 /* Estilização dos botões dropdown */
@@ -258,3 +388,44 @@ footer .container .parts .part-2 .medias ul li a{
 }
 
 /* **** */
+
+@media (max-width: 1500px) {
+    main .container .product-show{
+        background-color: #151d2783;
+        padding: 50px 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    main .container .product-show .cards{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media (max-width: 1040px) {
+    header .container .nav .mid{
+        display: none;
+    }
+
+    main .container .product-show .cards{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    footer .container .part-1 .links{
+        flex-direction: column;
+    }
+
+    footer .container .part-2 .medias ul{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 785px) {
+    main .container .product-show .cards{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
