@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/lista-tarefas.css">
+    <title>Lista de tarefas</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Minha lista de tarefas</h1>
+    </div>
+    <div class="to-do-list-input">
+        <input type="text" placeholder="Adicionar tarefa">
+        <button onclick="adicionarTarefa()">+</button>
+    </div>
+    <div class="to-do-list-items">
+        <ul id="to-do-list">
+            
+        </ul>
+    </div>
+
+    <script>
+        function adicionarTarefa() {
+            const listaTarefas = document.getElementById("to-do-list");
+            const novoItem = document.createElement("div");
+            
+            novoItem.innerHTML = 
+            `<div id="new-item">
+                <input id="text" type="text">
+                <button id="check">Ok</button>
+                <button id="remove">Del</button>
+            </div>`;
+
+            listaTarefas.appendChild(novoItem);
+            document.getElementById("nova-tarefa").value = "";
+        }
+    </script>
+</body>
+</html>
