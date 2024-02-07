@@ -4,36 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/lista-tarefas.css">
+    <link rel="stylesheet" href="../../../font-awesome-4.7.0/css/font-awesome.min.css">
     <title>Lista de tarefas</title>
 </head>
 <body>
-    <div class="title">
-        <h1>Minha lista de tarefas</h1>
+    <div class="container">
+        <div class="title">
+            <h1>Minha lista de tarefas</h1>
+        </div>
+        <div class="to-do-list-input">
+            <input id="newTask" type="text" placeholder="Adicionar tarefa">
+            <button onclick="adicionarTarefa()">+</button>
+        </div>
+        <div class="to-do-list-items">
+            <ul id="to-do-list">
+                
+            </ul>
+        </div>
     </div>
-    <div class="to-do-list-input">
-        <input type="text" placeholder="Adicionar tarefa">
-        <button onclick="adicionarTarefa()">+</button>
-    </div>
-    <div class="to-do-list-items">
-        <ul id="to-do-list">
-            
-        </ul>
-    </div>
-
+    
     <script>
+        let taskCount = 0;
+
         function adicionarTarefa() {
-            const listaTarefas = document.getElementById("to-do-list");
-            const novoItem = document.createElement("div");
+            taskCount = document.getElementsByClassName("new-item").length;
             
-            novoItem.innerHTML = 
-            `<div id="new-item">
-                <input id="text" type="text">
-                <button id="check">Ok</button>
-                <button id="remove">Del</button>
+            const newTask = document.getElementById("newTask");
+            const toDoList = document.getElementById("to-do-list");
+            const newItem = document.createElement("div");
+            
+            newItem.innerHTML = 
+            `<div id="${"item-"+taskCount}" class="new-item">
+                <div class="text">
+                    <input id="${"text-"+taskCount}" type="text" value="${newTask.value}">
+                </div>
+                <div class="button">
+                    <button id="${"check-"+taskCount}" class="ck-button" onClick="checkTask(this.id)"><i class="fa fa-check" aria-hidden="true"></i></button>
+                </div>
+                <div class="button">
+                    <button id="${"remove-"+taskCount}" class="del-button"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                </div>
             </div>`;
 
-            listaTarefas.appendChild(novoItem);
-            document.getElementById("nova-tarefa").value = "";
+            toDoList.appendChild(newItem);
+            const a = newItem.getElementById("text");
+            document.getElementById("new-item").value = "";
+        }
+
+        function checkTask(id){
+            const idNumber = id.substring(id.indexOf("-") + 1);
+
+            const taskField = document.getElementById("text-" + idNumber);
+            taskField.style.textDecoration = "line-through";
+            taskField.style.backgroundColor = "gray";
         }
     </script>
 </body>
