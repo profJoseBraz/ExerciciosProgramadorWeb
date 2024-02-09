@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/lista-tarefas.css">
-    <link rel="stylesheet" href="../../../font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../res/font-awesome-4.7.0/css/font-awesome.min.css">
     <title>Lista de tarefas</title>
 </head>
 <body>
@@ -16,22 +16,34 @@
             <input id="newTask" type="text" placeholder="Adicionar tarefa">
             <button onclick="addTask()"><p><i class="fa fa-plus" aria-hidden="true"></i></p></button>
         </div>
-        <div class="to-do-list-items">
-            <ul id="to-do-list">
-                
-            </ul>
-        </div>
 
-        <div id="modal-container" class="modal-container">
-            <div class="modal">
-                <h1>Título do Modal</h1>
-                <p>Conteúdo do Modal</p>
-                <button onclick="closeModal()">Fechar</button>
-            </div>
+        <!-- tarefas -->
+        <div class="to-do-list-items">
+            <ul id="to-do-list"></ul>
         </div>
+        <!--  -->
+
+        <!-- Modal -->
+        <div id="modal-container" class="modal-container"></div>
+        <div id="modal-overlay" class="modal-overlay"></div>
+        <!--  -->
+    
     </div>
     
     <script>
+        document.getElementById("modal-container").innerHTML = 
+        `<div class="modal">
+            <div class="title">
+                <h3>Erro ao adicionar nova tarefa!</h3>
+            </div>
+            <div class="message">
+                <p>Não é possível adicionar uma nova tarefa sem descrição!</p>
+            </div>
+            <div class="button">
+                <button onclick="closeModal()">Ok</button>
+            </div>
+        </div>`
+
         let taskCount = 0;
         closeModal();
 
@@ -39,7 +51,7 @@
             taskCount = document.getElementsByClassName("new-item").length;
             
             const newTask = document.getElementById("newTask");
-            
+
             if(newTask.value != ""){
                 const toDoList = document.getElementById("to-do-list");
                 const newItem = document.createElement("div");
@@ -56,10 +68,8 @@
                         <button id="${`remove-${taskCount}`}" class="del-button" onClick="removeTask(this.id)"><i class="fa fa-trash" aria-hidden="true"></i></button>
                     </div>
                 </div>`;
-
+                newTask.value = "";
                 toDoList.appendChild(newItem);
-                const a = newItem.getElementById("text");
-                document.getElementById("new-item").value = "";
             }else{
                 openModal();
             }
@@ -68,6 +78,7 @@
         function checkTask(id){
             const idNumber = id.substring(id.indexOf("-") + 1);
             const taskField = document.getElementById(`text-${idNumber}`);
+            const buttonCheck = document.getElementById(`check-${idNumber}`);
             const buttonRemove = document.getElementById(`remove-${idNumber}`);
             
             if(taskField.style.textDecoration == "line-through"){
@@ -91,17 +102,23 @@
             const itemId = id.split("-")[1];
             const itemToRemove = document.getElementById(`item-${itemId}`);
 
-            if (itemToRemove) { 
+            // if (itemToRemove) {
                 itemToRemove.parentNode.removeChild(itemToRemove);
-            }
+            // }
         }
 
         function openModal() {
-            document.getElementById("modal-container").style.display = "block";
+            document.getElementById("modal-container").style.display = "flex";
+            document.getElementById("modal-overlay").style.display = "flex";
+            document.getElementById("modal-container").style.opacity = "1";
+            document.getElementById("modal-overlay").style.opacity = "1";
         }
 
         function closeModal() {
             document.getElementById("modal-container").style.display = "none";
+            document.getElementById("modal-overlay").style.display = "none";
+            document.getElementById("modal-container").style.opacity = "0";
+            document.getElementById("modal-overlay").style.opacity = "0";
         }
     </script>
 </body>
