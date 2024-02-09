@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../../../font-awesome-4.7.0/css/font-awesome.min.css">
     <title>Slider</title>
 </head>
 <body>
     <div class="slider-container">
         <div class="slider">
             <div id="button-prev" class="button" onclick="previousSlide()">
-                <button><span><</span></button>
+                <button><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
             </div>
             
-            <div class="slide">
+            <div id="slide" class="slide">
                 <img id="slider-image">
             </div>
             
             <div id="button-next" class="button" onclick="nextSlide()">
-                <button><span>></span></button>
+                <button><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
             </div>  
         </div>
     </div>
@@ -32,23 +33,44 @@
 
         let currentIndex = 0;
         const sliderImage = document.getElementById("slider-image");
+        let nextImage;
 
         function nextSlide() {
             if(currentIndex < images.length - 1){
                 currentIndex = (currentIndex + 1);
-                updateSlide();
+                updateSlide("to-left");
             }
         }
 
         function previousSlide() {
             if(currentIndex > 0){
                 currentIndex = (currentIndex - 1);
-                updateSlide();
+                updateSlide("to-right");
             }
         }
 
-        function updateSlide() {
+        function wait(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function updateSlide(direction) { 
+            if (direction == "to-left") {
+                sliderImage.style.transform = "translateX(-1000px)";
+                await wait(100); // Aguarda 200ms antes de continuar
+                sliderImage.style.opacity = 0;
+                sliderImage.style.transform = "translateX(1000px)";
+            } else {
+                sliderImage.style.transform = "translateX(1000px)";
+                await wait(100); // Aguarda 200ms antes de continuar
+                sliderImage.style.opacity = 0;
+                sliderImage.style.transform = "translateX(-1000px)";
+            }
+            
+            await wait(100); // Aguarda 200ms antes de continuar
+            
             sliderImage.src = images[currentIndex];
+            sliderImage.style.opacity = 1;
+            sliderImage.style.transform = "translateX(0px)";
         }
 
         updateSlide();
