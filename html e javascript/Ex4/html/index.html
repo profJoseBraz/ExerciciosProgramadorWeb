@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/index.css">
+    <title>Jogo da memória</title>
+</head>
+<body>
+    <div class="container">
+        <div class="board">
+            <div id="card-1" class="card" onclick="cardClick(this.id)">
+                <div class="front">
+                    
+                </div>
+                <div class="back">
+                    <img src="../res/html-logo.png">
+                </div>
+            </div>
+
+            <div id="card-2" class="card" onclick="cardClick(this.id)">
+                <div class="front">
+                    
+                </div>
+                <div class="back">
+                    <img src="../res/react-logo.png">
+                </div>
+            </div>
+
+            <div id="card-3" id="card-1" class="card" onclick="cardClick(this.id)">
+                <div class="front">
+                    
+                </div>
+                <div class="back">
+                    <img src="../res/css-logo.png">
+                </div>
+            </div>
+
+            <div id="card-4" class="card" onclick="cardClick(this.id)">
+                <div class="front">
+                    
+                </div>
+                <div class="back">
+                    <img src="../res/css-logo.png">
+                </div>
+            </div>
+
+            <div id="card-5" class="card" onclick="cardClick(this.id)">
+                <div class="front">
+                    
+                </div>
+                <div class="back">
+                    <img src="../res/html-logo.png">
+                </div>
+            </div>
+
+            <div id="card-6" class="card" onclick="cardClick(this.id)">
+                <div class="front">
+                    
+                </div>
+                <div class="back">
+                    <img src="../res/react-logo.png">
+                </div>
+            </div>
+
+            <div id="card-7" class="card" onclick="cardClick(this.id)">
+                <div class="front">
+                    
+                </div>
+                <div class="back">
+                    <img src="../res/js-logo.webp">
+                </div>
+            </div>
+
+            <div id="card-8" class="card" onclick="cardClick(this.id)">
+                <div class="front">
+                    
+                </div>
+                <div class="back">
+                    <img src="../res/js-logo.webp">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var cardsClickedCount = 0;
+        var cardsClicked = [];
+
+        async function cardClick(cardId){
+            const card = document.getElementById(cardId);
+            
+            card.classList.add('flip');
+            await wait(600);
+
+            cardsClickedCount++;
+            cardsClicked.push(card);
+
+            if (cardsClickedCount == 2){
+                if (!verifyMatch(cardsClicked[0], cardsClicked[1])){
+                    for(i = 0; i < cardsClicked.length; i++){
+                        let card = cardsClicked[i];
+                        card.classList.remove("flip");
+                    }
+                }
+                
+                cardsClickedCount = 0;
+                cardsClicked = [];
+            }
+        }
+
+        function verifyMatch(card1, card2){
+            const backFace = document.getElementById(card1.getAttribute("id"));
+            const backFaceImage = backFace.querySelector("img");
+            const backFaceImageSrc = backFaceImage.src;
+
+            const backFace2 = document.getElementById(card2.getAttribute("id"));
+            const backFaceImage2 = backFace2.querySelector("img");
+            const backFaceImageSrc2 = backFaceImage2.src;
+
+            if (backFaceImageSrc == backFaceImageSrc2){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        function wait(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+    </script>
+</body>
+</html>
