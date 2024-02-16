@@ -1,9 +1,16 @@
-//Verificar se número é par ou ímpar
+//Boletim escolar
 
-const num = 2;
+var nota1, nota2, nota3, nota4;
 
-if (num % 2 == 0){
-    console.log("O número " + num + " é par.");
+nota1 = 8;
+nota2 = 7.2;
+nota3 = 8.1;
+nota4 = 4;
+
+const media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+if(media > 7){
+    console.log(`Média ${media.toFixed(2)}: Aprovado!`);
 }else{
-    console.log("O número " + num + " é ímpar.");
+    console.log(`Média ${media.toFixed(2)}: Reprovado!`);
 }

@@ -1,9 +1,9 @@
-//Contagem progressiva
+//Contagem regressiva
 
-let num = 0;
+let num = 500;
 
-while(num <= 500){
+while(num >= 0){
     console.log(num);
 
-    num = num + 1
+    num = num - 1
 }

@@ -1,9 +1,9 @@
-//Contagem regressiva
+//Verificar se número é par ou ímpar
 
-let num = 500;
+const num = 2;
 
-while(num >= 0){
-    console.log(num);
-
-    num = num - 1
+if (num % 2 == 0){
+    console.log("O número " + num + " é par.");
+}else{
+    console.log("O número " + num + " é ímpar.");
 }

@@ -1,7 +1,9 @@
-//Tabuada
+//Contagem progressiva
 
-const tab = 8;
+let num = 0;
 
-for(i = 1; i <= 10; i++){
-    console.log(tab + " x " + i + " = " + i * tab);
+while(num <= 500){
+    console.log(num);
+
+    num = num + 1
 }
