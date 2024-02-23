@@ -28,9 +28,10 @@ body{
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.367);
     width: 680px;
     transition: width 1s ease;
+    backdrop-filter: blur(5px);
 }
 
 .calculator .buttons-standard{
@@ -95,6 +96,7 @@ body{
     border-bottom: 2px solid #f0f0f0;
     margin-bottom: 20px;
     outline: none;
+    background-color: transparent;
 }
 
 @media (max-height: 900px) {
