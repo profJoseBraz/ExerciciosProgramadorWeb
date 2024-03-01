@@ -104,7 +104,9 @@ function acClick(){
 }
 
 function deleteClick(){
-    
+    var currentValue = resultArea.value;
+    var resultValue = currentValue.substring(0, currentValue.length - 1);
+    resultArea.value = resultValue;    
 }
 
 function sciClick(){

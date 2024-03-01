@@ -97,6 +97,7 @@ body{
     margin-bottom: 20px;
     outline: none;
     background-color: transparent;
+    text-align: right;
 }
 
 @media (max-height: 900px) {
