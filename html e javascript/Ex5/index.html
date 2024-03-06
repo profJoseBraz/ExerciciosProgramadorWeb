@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de tabuada</title>
+</head>
+<body>
+    <div class="container">
+        <input id="mult-table-input" type="text" placeholder="Tabuada desejada">
+        <input id="mult-table-input-max" type="text" placeholder="Mutiplicador máximo">
+        <button onclick="generateMultTable()">Gerar tabuada</button>
+
+        <div id="mult-table" class="mult-table">
+            
+        </div>
+    </div>    
+
+    <script>
+        const multTableInput = document.getElementById("mult-table-input");
+        const multTableInputMax = document.getElementById("mult-table-input-max");
+
+        function generateMultTable(){
+            const multTableNumber = multTableInput.value;
+            const maxMultiplier = multTableInputMax.value;
+        
+            multTable = document.getElementById("mult-table");
+
+            multTableLine = document.createElement("div");
+            
+            multTable.appendChild(multTableLine);
+
+            for(i = 1; i <= maxMultiplier; i++){
+                multTableLine.innerHTML += 
+                `
+                    <p>${multTableNumber} x ${i} = ${multTableNumber * i}</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
