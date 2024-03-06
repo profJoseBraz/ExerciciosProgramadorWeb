@@ -80,6 +80,10 @@ body{
     height: 60%;
     display: flex;
     justify-content: center;
+    /* overflow: auto; */
+}
+
+.to-do-list-items ul{
     overflow: auto;
 }
 
@@ -246,5 +250,6 @@ body{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
+    backdrop-filter: blur(5px);
     pointer-events: auto;
 }
