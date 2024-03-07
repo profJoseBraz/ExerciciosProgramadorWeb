@@ -1,5 +1,6 @@
 import Input from "./Input";
 import Button from "./Button";
+import TaskContainer from "./TaskContainer";
 import "./ToDoList.css";
 
 function ToDoList() {
@@ -8,6 +9,9 @@ function ToDoList() {
       <div className="input">
         <Input placeholder="Nova tarefa" />
         <Button />
+      </div>
+      <div className="task-container">
+        <TaskContainer />
       </div>
     </>
   );

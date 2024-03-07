@@ -1,7 +1,7 @@
 import "./Input.css";
 
 interface Props {
-  placeholder: string;
+  placeholder?: string;
 }
 
 function Input({ placeholder }: Props) {
