@@ -69,6 +69,7 @@
                     </div>
                 </div>`;
                 newTask.value = "";
+
                 toDoList.appendChild(newItem);
             }else{
                 openModal();
@@ -103,9 +104,11 @@
             // const idNumber = id.substring(id.indexOf("-") + 1);
             const itemToRemove = document.getElementById(`item-${itemId}`);
 
-            // if (itemToRemove) {
+            itemToRemove.classList.add("remove-item");
+
+            setTimeout(() => {
                 itemToRemove.parentNode.removeChild(itemToRemove);
-            // }
+            }, 900);
         }
 
         function openModal() {
