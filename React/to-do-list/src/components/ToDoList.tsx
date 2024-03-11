@@ -1,20 +1,26 @@
-import Input from "./Input";
-import Button from "./Button";
-import TaskContainer from "./TaskContainer";
-import "./ToDoList.css";
+import { useState, ChangeEvent } from 'react';
+import MyButton from './MyButton';
+import MyInput from './MyInput';
+import './ToDoList.css'
 
-function ToDoList() {
-  return (
-    <>
-      <div className="input">
-        <Input placeholder="Nova tarefa" />
-        <Button />
-      </div>
-      <div className="task-container">
-        <TaskContainer />
-      </div>
-    </>
-  );
+function ToDoList(){
+
+    const [task, setTask] = useState(['']);
+
+    const handleInputChange = (e:ChangeEvent<HTMLInputElement>) => {
+        setTask([e.target.value]);
+    }
+
+    const addTask = () => {
+        alert("clicou");
+    }
+
+    return(
+        <>
+            <MyInput type='text'/>
+            <MyButton onClick={addTask}>Add</MyButton>
+        </>
+    );
 }
 
 export default ToDoList;
