@@ -1,6 +1,7 @@
 import { ChangeEvent, ReactNode, useState } from "react";
 import MyInput from "./MyInput";
 import "./Task.css";
+import MyButton from "./MyButton";
 
 //Propriedades do componente Task. Necessita apenas de uma propriedade de descrição para ser adicionada a tarefa quando ela for criada
 interface Props {
@@ -24,9 +25,8 @@ function Task({ description }: Props) {
                 onChange={handleOnChange}
             />
 
-            {/*Botões provisórios, depois serão alterados para componentes*/}
-            <button>ck</button>
-            <button>del</button>
+            <MyButton>ck</MyButton>
+            <MyButton>del</MyButton>
         </div>
     );
 }

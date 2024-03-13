@@ -1,6 +1,5 @@
 import { ChangeEvent } from "react";
 import "./MyInput.css";
-import MyButton from "./MyButton";
 
 interface Props {
     type: string;
